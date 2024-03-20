@@ -1,5 +1,5 @@
 import Advertise from "@/components/Advertise";
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -75,53 +75,102 @@ const categories = [
   },
 
 ]
-const blogs=[
+const blogs = [
   {
-    id:1,
-    img:'https://z1photorankmedia-a.akamaihd.net/media/p/f/x/pfxjs85/normal.jpg',
-    text:"@yes.im.home"
+    id: 1,
+    img: 'https://z1photorankmedia-a.akamaihd.net/media/p/f/x/pfxjs85/normal.jpg',
+    text: "@yes.im.home"
   },
   {
-    id:2,
-    img:'https://z2photorankmedia-a.akamaihd.net/media/5/s/x/5sxjs85/normal.jpg',
-    text:"@kaji.pm"
+    id: 2,
+    img: 'https://z2photorankmedia-a.akamaihd.net/media/5/s/x/5sxjs85/normal.jpg',
+    text: "@kaji.pm"
   },
   {
-    id:3,
-    img:'https://z2photorankmedia-a.akamaihd.net/media/g/c/v/gcveo85/normal.jpg',
-    text:"@blogfrenchie"
+    id: 3,
+    img: 'https://z2photorankmedia-a.akamaihd.net/media/g/c/v/gcveo85/normal.jpg',
+    text: "@blogfrenchie"
   },
   {
-    id:4,
-    img:'https://z3photorankmedia-a.akamaihd.net/media/k/y/w/kywqp85/normal.jpg',
-    text:"@bikahveemolasiii"
+    id: 4,
+    img: 'https://z3photorankmedia-a.akamaihd.net/media/k/y/w/kywqp85/normal.jpg',
+    text: "@bikahveemolasiii"
   },
   {
-    id:5,
-    img:'https://z1photorankmedia-a.akamaihd.net/media/7/2/x/72xqp85/normal.jpg',
-    text:"@tamarahome_"
+    id: 5,
+    img: 'https://z1photorankmedia-a.akamaihd.net/media/7/2/x/72xqp85/normal.jpg',
+    text: "@tamarahome_"
   },
   {
-    id:6,
-    img:'https://z1photorankmedia-a.akamaihd.net/media/i/o/y/ioybs85/normal.jpg',
-    text:"@ultrxstxr_ishyy"
+    id: 6,
+    img: 'https://z1photorankmedia-a.akamaihd.net/media/i/o/y/ioybs85/normal.jpg',
+    text: "@ultrxstxr_ishyy"
   },
   {
-    id:7,
-    img:'https://z3photorankmedia-a.akamaihd.net/media/h/t/2/ht2vp85/normal.jpg',
-    text:"@mai_miyagi"
+    id: 7,
+    img: 'https://z3photorankmedia-a.akamaihd.net/media/h/t/2/ht2vp85/normal.jpg',
+    text: "@mai_miyagi"
   },
   {
-    id:8,
-    img:'https://photorankmedia-a.akamaihd.net/media/7/6/x/76xqp85/normal.jpg',
-    text:"@neslihan59"
+    id: 8,
+    img: 'https://photorankmedia-a.akamaihd.net/media/7/6/x/76xqp85/normal.jpg',
+    text: "@neslihan59"
   },
   {
-    id:9,
-    img:'https://photorankmedia-a.akamaihd.net/media/v/u/2/vu2vp85/normal.jpg',
-    text:"@kinga.haczek"
+    id: 9,
+    img: 'https://photorankmedia-a.akamaihd.net/media/v/u/2/vu2vp85/normal.jpg',
+    text: "@kinga.haczek"
+  },
+  {
+    id:10,
+    img:"https://z2photorankmedia-a.akamaihd.net/media/7/j/f/7jf5o85/normal.jpg",
+    text:"@ivana_alexandrova"
+  }
+]
+
+const trending_category = [
+  {
+    id: 1,
+    text: "For me",
+    dist: "/"
+  },
+  {
+    id: 2,
+    text: "Women",
+    dist: "/"
+  },
+  {
+    id: 3,
+    text: "Men",
+    dist: "/"
+  },
+  {
+    id: 4,
+    text: "Baby",
+    dist: "/"
+  },
+  {
+    id: 5,
+    text: "Kids",
+    dist: "/"
+  },
+  {
+    id: 6,
+    text: "H&M Home",
+    dist: "/"
+  },
+  {
+    id: 7,
+    text: "Sport",
+    dist: "/"
+  },
+  {
+    id: 8,
+    text: "Sale",
+    dist: "/"
   },
 ]
+
 
 export default function Home() {
   return (
@@ -149,17 +198,26 @@ export default function Home() {
         </div>
 
       </section>
+
+      <section className="my-10 flex items-center justify-center flex-col gap-5">
+        <h1 className="text-3xl font-bold text-[#222]">Trending Now</h1>
+        <div className="flex gap-5">
+          {trending_category.map(item => (
+            < input type="button" key={item.id} className="swap_button"  value={item.text}/>
+          ))}
+        </div>
+      </section>
       <Advertise
-        key="Refresh your wardrobe"
+        key="Comfort & style"
         description="Shorts in many dirrerent styles"
-        headline="Refresh your wardrobe"
+        headline="Comfort & style"
         image="https://cdn-eu.dynamicyield.com/api/9876644/images/37080aaad7c3__homepage-banner3-d.png"
       />
 
       <Advertise
-        key="Springtime harmony"
+        key="Refresh your wardrobe"
         description="Elevated home decor for the new season"
-        headline="Springtime harmony"
+        headline="Refresh your wardrobe"
         image="https://cdn-eu.dynamicyield.com/api/9876644/images/1aa1f2e995a42__homepage-banner5-d.png"
       />
       <Advertise
@@ -171,15 +229,15 @@ export default function Home() {
       <section className="flex gap-32 mt-10 items-center ">
         <div className=" flex gap-4 flex-col max-w-[25%]">
           <h1 className="font-bold text-2xl">Styled by you</h1>
-          <p className="text-xs">
+          <p className="text-sm">
             We love to see how you style your favourites from H&M: Keep sharing your personal style with @HM and #HMxME for a chance to be featured at hm.com, in our marketing materials and in our stores.
           </p>
-          <a>Visit HMxME</a>
+          <a href="#" className="hover:underline font-semibold">Visit HMxME</a>
         </div>
         <Carousel
           opts={{
             align: "start",
-            loop:true
+            loop: true
           }}
           className=""
         >
@@ -188,10 +246,10 @@ export default function Home() {
               <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
                 <div >
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center flex-col relative">
-                      <img src={item.img} className="w-full h-full object-cover"/>
-                      <div className="bg-[#00000000] flex items-center justify-center text-[#ffffff00] h-full w-full absolute hover:bg-[#00000066] hover:text-[#ffffff] transition-[ease_2s]">
-                      <p className="text-sm">{item.text}</p>
+                    <CardContent className="card_content">
+                      <img src={item.img} className="w-full h-full object-cover" />
+                      <div className="black_hover">
+                        <p className="text-sm">{item.text}</p>
                       </div>
                     </CardContent>
                   </Card>

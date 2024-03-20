@@ -73,7 +73,7 @@ const Header = () => {
             ))}
             
         </div>
-        <nav className='flex mx-auto max-w-6xl justify-between py-6 items-center'>
+        <nav className='navbar'>
             <div className='flex border-black border-b-2'>
                 <input type='text' placeholder='What are you looking for?' className='outline-none text-black'/>
                 <MagnifyingGlassIcon className='h-8 w-8'/>
@@ -82,11 +82,11 @@ const Header = () => {
                 <img src='https://eg.hm.com/themes/custom/transac/alshaya_hnm/site-logo.svg?tY6kjl' className='max-w-[15%]'/>
             </div>
             <div className='flex gap-4'>
-                <HeartIcon className='h-8 w-8'/>
-                <ShoppingBagIcon className='h-8 w-8'/>
+                <HeartIcon className='icon' />
+                <ShoppingBagIcon className='icon'/>
             </div>
         </nav>
-        <div className='max-w-7xl flex justify-center gap-5 mx-auto pt-4'>
+        <div className='nav_header_links_container'>
             {navLinks.map(link=>(
                 <a key={link.id} href={link.dist}>{link.text}</a>
             ))}

@@ -1,0 +1,19 @@
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        
+        print(string[i:len(sub_string)+count])
+        if string[i:len(sub_string)+count] == sub_string:
+            return i
+        # if string[i:(len(sub_string)-1)] == sub_string:
+        #     return "same"
+    # return
+        count+=1
+
+
+string = input("enzter your string :").strip()
+sub_string = input("enter your sub string :").strip()
+# print(string)
+# print(sub_string)
+count = count_substring(string, sub_string)
+print(count)

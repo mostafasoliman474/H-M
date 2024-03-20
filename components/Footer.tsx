@@ -127,7 +127,7 @@ const footlinks = [
 const Footer = () => {
     return (
         <footer className='bg-[#e4e4e4]'>
-            <div className='flex  mx-auto justify-between px-8 pt-20'>
+            <div className='footer_top'>
                 <section className='flex gap-40'>
                     {footlinks.map(item => (
                         <div key={item.id} className='flex flex-col gap-5'>
@@ -144,12 +144,12 @@ const Footer = () => {
                         <p className='text-[#222] text-xs  '>be the first to know about our newest arrivals, special offers and store events near you.</p>
                         <div className='flex border-black border-b-2'>
                             <input type='email' placeholder='Enter your Email Adresse' className='bg-transparent outline-none w-[80%] text-sm' />
-                            <input type='button' value='SIGN UP' className='px-2 py-1 bg-black text-center font-extrabold text-white cursor-pointer' />
+                            <input type='button' value='SIGN UP' className='signin_button' />
                         </div>
                     </div>
                 </section>
             </div>
-            <div className='mx-auto flex flex-col items-center pt-20 pb-10 gap-4'>
+            <div className='footer_bottom'>
                 <div className='flex flex-col gap-2 items-center'>
                     <p className='text-xs text-[#222] font-bold'>Customer Service</p>
                     <p className='text-[10px] text-[#222] font-medium'>For EGYPT 02-24803822</p>
