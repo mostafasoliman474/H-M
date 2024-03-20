@@ -1,12 +1,10 @@
 import React from 'react'
 
-const page = ({children}:Readonly<{
-    children: React.ReactNode;
-  }>) => {
+const page = ()=> {
   return (
     <div>
         <p>blogs</p>
-        {children}
+        
     </div>
   )
 }
