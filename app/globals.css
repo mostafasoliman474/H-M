@@ -131,18 +131,29 @@
     position: absolute;
     top: 0;
     left: 5px;
-    font-size: 18px;
     transition: all 0.3s linear;
     z-index: 1;
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .input_register {
-    @apply outline-none relative z-[2] bg-transparent p-[2px_5px];
+    @apply outline-none relative z-[2] bg-transparent p-[2px_5px] text-xs;
   }
 
   input:focus+.lable , input:valid+.lable{
     top: -18px;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .auth_headlines{
+    @apply font-normal text-xl pb-2 border-b border-gray-300 text-[#222];
+  }
+  .auth_subtitle{
+    @apply font-semibold text-base;
+  }
+  .logwith{
+    @apply flex items-center border-[1px] border-black pr-10 cursor-pointer;
+  }
+  .logwith_text{
+    @apply text-xs;  
   }
 }
